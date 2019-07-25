@@ -23,6 +23,7 @@ Config.augmentation.random_mirror = True
 Config.train = ed()
 Config.train.optimizer = 'SGD'
 Config.train.lr = 0.01
+Config.train.wd = '0.0005'
 Config.train.momentum = 0.9
 Config.train.mode = 'min'
 Config.train.factor = 0.1
@@ -37,7 +38,8 @@ Config.train.num_workers = 4
 
 Config.model = ed()
 # Config.models = ['resnet50', 'InceptionV3', 'DenseNet201', 'Xception']
-Config.models = ['resnet50']
+Config.model.name = 'resnet50'
+Config.model.num_class = 12
 
 Config.misc = ed()
 Config.misc.log_inteval = 50
