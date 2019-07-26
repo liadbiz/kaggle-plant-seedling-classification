@@ -43,7 +43,7 @@ Config.model.num_class = 12
 
 Config.misc = ed()
 Config.misc.log_inteval = 50
-Config.misc.eval_step = 5
-Config.misc.save_step = 5
+Config.misc.eval_step = 1
+# Config.misc.save_step = 5
 Config.misc.save_path = 'checkpoints/'
 

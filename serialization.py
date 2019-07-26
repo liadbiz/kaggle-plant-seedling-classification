@@ -19,10 +19,3 @@ def mkdir_if_missing(dir_path):
             raise
 
 
-def save_checkpoint(state, is_best, save_dir, filename='checkpoint.pth.tar'):
-    fpath = '_'.join((str(state['epoch']), filename))
-    fpath = osp.join(save_dir, fpath)
-    mkdir_if_missing(save_dir)
-    torch.save(state, fpath)
-    if is_best:
-        shutil.copy(fpath, osp.join(save_dir, 'model_best.pth'))

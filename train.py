@@ -45,7 +45,7 @@ def train():
     model_solver = Solver(Config, model)
     model_solver.fit(train_data=train_data, valid_data=valid_data, optimizer=optimizer, criterion=ce_loss,
                      lr_schduler=lr_scheduler)
-    model_solver.evaluate(test_data)
+    # model_solver.evaluate(test_data)
 
 if __name__ == '__main__':
     train()
